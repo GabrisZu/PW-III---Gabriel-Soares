@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(58, 53, 53);
+    background-color: rgb(32, 30, 30);
     margin: 0;
 }
 
@@ -8,6 +8,8 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .container1{
@@ -15,14 +17,37 @@ body{
     align-items: center;
     font-family: "Playfair Display", serif;
     background-color:lightskyblue;
-    border-radius: 30px;
+    box-shadow: 
+    0 0 5px #00ffff,
+    0 0 10px #00ccff,
+    0 0 20px #9966ff,
+    0 0 40px #6633ff;
     flex-direction: column;
     padding: 2%;
+    height: 50vh;
+    width: 50vh;
 }
 
-.container1 input, select{
+.container2{
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    background-color:lightskyblue;
+    box-shadow: 
+    0 0 5px #00ffff,
+    0 0 10px #00ccff,
+    0 0 20px #9966ff,
+    0 0 40px #6633ff;
+    flex-direction: column;
+    padding: 2%;
+    height: 50vh;
+    width: 50vh;
+}
+
+input, select{
     text-align: center;
-    height: 100%;
+    height: 5%;
+    font-size: 15px;
 }
 
 .container1 button{
@@ -30,4 +55,17 @@ body{
     font-family: "Playfair Display", serif;
     padding: 10px;
     font-size: 20px;
+}
+
+#lista {
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 0;
+    list-style: none;
+    flex-grow: 1;
+}
+
+#lista li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
 }

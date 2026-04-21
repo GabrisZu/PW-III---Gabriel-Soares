@@ -10,30 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <div class="container1">
-            <h1>Adicionar Gasto</h1>
-            <h2>Descrição</h2>
-            <input type="text" id="descricao">
-            <h2>Valor</h2>
-            <input type="text" id="valor">
-            <h2>Categoria</h2>
-            <select name="categoria" id="cate">
-                <option value="null"></option>
-                <option value="Alime">Alimentação</option>
-                <option value="Transp">Transporte</option>
-                <option value="Lazer">Lazer</option>
-            </select>
-            <br><button id="botao">Adicionar</button>
+
+    <form action="" id="form">
+        <div class="content">
+            <div class="container1">
+                <h1>Adicionar Gasto</h1>
+
+                <h2>Descrição</h2>
+                <input type="text" id="descricao">
+
+                <h2>Valor</h2>
+                <input type="number" id="valor">
+
+                <h2>Categoria</h2>
+                <select name="categoria" id="categoria">
+                    <option value=""></option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Lazer">Lazer</option>
+                </select>
+                <br><button type="submit">Adicionar</button>
+            </div>
+
+            <div class="container2">
+                <h1>Filtrar:</h1>
+                <select id="filtro">
+                    <option value="Todos">Todos</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Lazer">Lazer</option>
+                </select>
+                <ul id="lista"></ul>
+
+                <h2 class="total">Total: R$ <span id="total">0</span></h2>
+            </div>
         </div>
-    </div>
+    </form>
+    <script src="script.js"></script>
 
-    <script>
-        const desc = document.getElementById("descricao");
-        const valor = document.getElementById("valor");
-        const categoria = document.getElementById("cate")
-        const butao = document.getElementById("botao")
-
-    </script>
 </body>
 </html>
